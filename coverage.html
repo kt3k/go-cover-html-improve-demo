@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+				margin: 0;
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.breadcrumb {
+				height: 24px;
+				padding: 0 8px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			.file-content {
+				padding: 8px 12px;
+			}
+			.index {
+				padding: 8px 12px;
+			}
+			.index table tr td {
+				padding-right: 8px;
+			}
+			.meter-wrapper {
+				height: 12px;
+				width: 100px;
+				position: relative;
+				background-color: rgb(192, 0, 0);
+			}
+			.meter-green {
+				height: 12px;
+				background-color: rgb(20, 236, 155);
+				position: absolute;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">no coverage</span>
+				<span class="cov1">low coverage</span>
+				<span class="cov2">*</span>
+				<span class="cov3">*</span>
+				<span class="cov4">*</span>
+				<span class="cov5">*</span>
+				<span class="cov6">*</span>
+				<span class="cov7">*</span>
+				<span class="cov8">*</span>
+				<span class="cov9">*</span>
+				<span class="cov10">high coverage</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		<div class="index" id="index" style="display: none;">
+			<table>
+				
+					<tr>
+						<td>
+							<a href="#file0">github.com/kt3k/saku/exec_unix.go</a>
+						</td>
+						<td>
+							<span class="cov4">46.7%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 46.666667%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file1">github.com/kt3k/saku/main.go</a>
+						</td>
+						<td>
+							<span class="cov9">92.3%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 92.307692%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file2">github.com/kt3k/saku/parse_config.go</a>
+						</td>
+						<td>
+							<span class="cov10">100.0%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 100.000000%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file3">github.com/kt3k/saku/read_config.go</a>
+						</td>
+						<td>
+							<span class="cov9">93.3%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 93.333333%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file4">github.com/kt3k/saku/run_options.go</a>
+						</td>
+						<td>
+							<span class="cov3">37.5%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 37.500000%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file5">github.com/kt3k/saku/task.go</a>
+						</td>
+						<td>
+							<span class="cov6">66.7%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 66.666667%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file6">github.com/kt3k/saku/task_collection.go</a>
+						</td>
+						<td>
+							<span class="cov5">58.7%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 58.695652%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file7">github.com/kt3k/saku/usage.go</a>
+						</td>
+						<td>
+							<span class="cov10">100.0%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 100.000000%"></span>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<a href="#file8">github.com/kt3k/saku/util.go</a>
+						</td>
+						<td>
+							<span class="cov2">25.0%</span>
+						</td>
+						<td>
+							<div class="meter-wrapper">
+							<span class="meter-green" style="width: 25.000000%"></span>
+							</div>
+						</td>
+					</tr>
+				
+			</table>
+		</div>
+		
+		<div id="file0" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/exec_unix.go (46.7%)
+			</p>
+			<pre class="file-content">// +build !windows
+
+package main
+
+import (
+        "os"
+        "syscall"
+        "os/exec"
+)
+
+func execCommand(command string) *exec.Cmd <span class="cov10" title="2">{
+        cmd := exec.Command("/bin/sh", "-c", command)
+
+        cmd.Stdout = os.Stdout
+        cmd.Stderr = os.Stderr
+        cmd.SysProcAttr = &amp;syscall.SysProcAttr{}
+        cmd.SysProcAttr.Setsid = true
+        cmd.Env = append(os.Environ(), "IN_SAKU=true")
+
+        return cmd
+}</span>
+
+func terminateCommand(cmd *exec.Cmd) error <span class="cov0" title="0">{
+        if cmd == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+        <span class="cov0" title="0">if cmd.Process == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+
+        <span class="cov0" title="0">group, err := os.FindProcess(-1 * cmd.Process.Pid)
+
+        if err == nil </span><span class="cov0" title="0">{
+                group.Signal(syscall.SIGKILL)
+        }</span>
+
+        <span class="cov0" title="0">return err</span>
+}
+</pre>
+		</div>
+		
+		<div id="file1" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/main.go (92.3%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "fmt"
+        "os"
+        "strconv"
+        "strings"
+
+        "github.com/fatih/color"
+        "github.com/simonleung8/flags"
+)
+
+func main() <span class="cov0" title="0">{
+        cwd, _ := os.Getwd()
+        os.Exit(int(run(cwd, os.Args[1:]...)))
+}</span>
+
+func run(cwd string, args ...string) exitCode <span class="cov9" title="12">{
+        fc := flags.New()
+
+        fc.NewBoolFlag("help", "h", "Show the help message and exits.")
+        fc.NewBoolFlag("version", "v", "")
+        fc.NewBoolFlag("parallel", "p", "Runs tasks in parallel.")
+        fc.NewBoolFlag("race", "r", "")
+        fc.NewBoolFlag("serial", "s", "")
+        fc.NewStringFlagWithDefault("config", "c", "", defaultConfigFile)
+
+        err := fc.Parse(args...)
+
+        if err != nil </span><span class="cov1" title="1">{
+                fmt.Println(color.RedString("Error:"), err)
+                return exitCodeError
+        }</span>
+
+        <span class="cov8" title="11">if fc.Bool("help") </span><span class="cov1" title="1">{
+                usage()
+                return exitCodeOk
+        }</span>
+
+        <span class="cov8" title="10">if fc.Bool("version") </span><span class="cov1" title="1">{
+                fmt.Printf("saku@%s\n", Version)
+                return exitCodeOk
+        }</span>
+
+        <span class="cov8" title="9">configFile := fc.String("config")
+
+        config, err1 := readConfig(cwd, configFile)
+
+        if err1 != nil </span><span class="cov4" title="3">{
+                if configFile != defaultConfigFile </span><span class="cov1" title="1">{
+                        fmt.Println(color.RedString("Error:"), "File not found:", configFile)
+                }</span><span class="cov3" title="2"> else {
+                        fmt.Println(color.RedString("Error:"), "File not found:", configFile)
+                        fmt.Println("  And &lt;!-- saku start --&gt;&lt;!-- saku end --&gt; directive not found in README.md as well")
+                }</span>
+
+                <span class="cov4" title="3">return exitCodeError</span>
+        }
+
+        <span class="cov6" title="6">tasks := ParseConfig(&amp;config)
+
+        titles := fc.Args()
+
+        if len(titles) == 0 </span><span class="cov3" title="2">{
+                fmt.Println("There are", color.MagentaString(strconv.Itoa(len(tasks.tasks))), "task(s)")
+
+                for _, t := range tasks.tasks </span><span class="cov10" title="15">{
+                        fmt.Println("  " + color.CyanString("["+t.title+"]"))
+                        if len(t.descriptions) == 0 </span><span class="cov4" title="3">{
+                                fmt.Println("    " + color.New(color.Italic).Sprint("No description"))
+                        }</span>
+
+                        <span class="cov10" title="15">for _, desc := range t.descriptions </span><span class="cov9" title="13">{
+                                fmt.Println("    " + desc)
+                        }</span>
+                }
+
+                <span class="cov3" title="2">return exitCodeOk</span>
+        }
+
+        <span class="cov5" title="4">for _, title := range titles </span><span class="cov5" title="4">{
+                _, ok := tasks.getByTitle(title)
+
+                if !ok </span><span class="cov1" title="1">{
+                        fmt.Println(color.RedString("Error:"), "Task not defined:", title)
+                        return exitCodeError
+                }</span>
+        }
+
+        <span class="cov4" title="3">runOpts := &amp;runOptions{cwd: "", fc: fc}
+
+        if runOpts.isSerialAndParallel() </span><span class="cov1" title="1">{
+                fmt.Println(color.RedString("Error:"), "both --serial and --parallel options are specified")
+                return exitCodeError
+        }</span>
+
+        <span class="cov3" title="2">runTasks := tasks.filterByTitles(titles)
+
+        fmt.Print(color.CyanString("[saku]"), " Run ", color.MagentaString(strings.Join(titles, ", ")))
+
+        if len(titles) &gt; 1 </span><span class="cov0" title="0">{
+                fmt.Print(" ", runOpts.runLabel())
+        }</span>
+
+        <span class="cov3" title="2">fmt.Println()
+
+        err0 := runTasks.Run(runOpts)
+
+        if err0 != nil </span><span class="cov1" title="1">{
+                fmt.Println(color.RedString("Error:"), err0)
+
+                return exitCodeError
+        }</span><span class="cov1" title="1"> else {
+                fmt.Print(color.CyanString("[saku]"))
+
+                if !invokedInSaku() </span><span class="cov0" title="0">{
+                        fmt.Print(" ", prependEmoji("✨", "Finish "))
+                }</span><span class="cov1" title="1"> else {
+                        fmt.Print(" Finish ")
+                }</span>
+
+                <span class="cov1" title="1">fmt.Print(color.MagentaString(strings.Join(titles, ", ")))
+
+                if len(titles) &gt; 1 </span><span class="cov0" title="0">{
+                        fmt.Print(" ", runOpts.runLabel())
+                }</span>
+
+                <span class="cov1" title="1">fmt.Println()</span>
+        }
+
+        <span class="cov1" title="1">return exitCodeOk</span>
+}
+</pre>
+		</div>
+		
+		<div id="file2" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/parse_config.go (100.0%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "gopkg.in/russross/blackfriday.v2"
+        "strings"
+)
+
+// Parses config markdown and returns tasks.
+func ParseConfig(config *[]byte) *TaskCollection <span class="cov4" title="7">{
+        tasks := newTaskCollection()
+
+        node := blackfriday.New().Parse(*config).FirstChild
+
+        for node != nil </span><span class="cov10" title="197">{
+                if node.Type == blackfriday.Heading </span><span class="cov8" title="68">{
+                        /* Heading &gt; Text */
+                        title := string(node.FirstChild.Literal)
+
+                        tasks.newTask()
+                        tasks.setCurrentTaskTitle(title)
+                }</span><span class="cov9" title="129"> else if node.Type == blackfriday.BlockQuote </span><span class="cov8" title="61">{
+                        /* BlockQuote &gt; Paragraph */
+                        p := node.FirstChild
+
+                        for p != nil </span><span class="cov8" title="61">{
+                                /* Paragraph &gt; Text */
+                                description := string(p.FirstChild.Literal)
+
+                                for _, desc := range strings.Split(description, "\n") </span><span class="cov8" title="66">{
+                                        tasks.addCurrentTaskDescription(desc)
+                                }</span>
+
+                                <span class="cov8" title="61">p = p.Next</span>
+                        }
+                }<span class="cov8" title="68"> else if node.Type == blackfriday.CodeBlock </span><span class="cov8" title="68">{
+                        /* CodeBlock &gt; Text */
+                        code := string(node.Literal)
+                        commands := strings.Split(code, "\n")
+
+                        for _, command := range commands </span><span class="cov9" title="166">{
+                                if strings.Trim(command, " \t\r") != "" </span><span class="cov8" title="98">{
+                                        tasks.addCurrentTaskCommands([]string{command})
+                                }</span>
+                        }
+                }
+
+                <span class="cov10" title="197">node = node.Next</span>
+        }
+
+        <span class="cov4" title="7">return tasks</span>
+}
+</pre>
+		</div>
+		
+		<div id="file3" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/read_config.go (93.3%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "errors"
+        "fmt"
+        "io/ioutil"
+        "path/filepath"
+        "regexp"
+
+        "github.com/fatih/color"
+)
+
+const defaultConfigFile = "saku.md"
+
+var patternEmbedDirective = regexp.MustCompile(`(?ism)&lt;!--\s*saku\s+start\s*--&gt;(.*)&lt;!--\s*saku\s+end\s*--&gt;`)
+
+// Reads task config from markdown files
+func readConfig(cwd string, configFile string) ([]byte, error) <span class="cov10" title="9">{
+        absPath := filepath.Join(cwd, configFile)
+
+        data, err := ioutil.ReadFile(absPath)
+
+        if err == nil </span><span class="cov7" title="5">{
+                if !invokedInSaku() </span><span class="cov0" title="0">{
+                        fmt.Println("Read", prependEmoji("🔎", color.MagentaString(absPath)))
+                }</span>
+                <span class="cov7" title="5">return data, nil</span>
+        }
+
+        <span class="cov6" title="4">if configFile != defaultConfigFile </span><span class="cov1" title="1">{
+                return []byte{}, err
+        }</span>
+
+        <span class="cov5" title="3">absPath = filepath.Join(cwd, "README.md")
+        data, err = ioutil.ReadFile(absPath)
+
+        if err != nil </span><span class="cov1" title="1">{
+                return []byte{}, err
+        }</span>
+
+        <span class="cov3" title="2">if !patternEmbedDirective.Match(data) </span><span class="cov1" title="1">{
+                return []byte{}, errors.New("No &lt;!-- saku start --&gt;&lt;!-- saku end --&gt; directive found")
+        }</span>
+
+        <span class="cov1" title="1">return patternEmbedDirective.FindSubmatch(data)[1], nil</span>
+}
+</pre>
+		</div>
+		
+		<div id="file4" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/run_options.go (37.5%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "github.com/fatih/color"
+        "github.com/simonleung8/flags"
+)
+
+type runOptions struct {
+        cwd string
+        fc  flags.FlagContext
+}
+
+func (r *runOptions) runLabel() string <span class="cov0" title="0">{
+        if r.isParallel() </span><span class="cov0" title="0">{
+                return "in " + color.CyanString("parallel")
+        }</span><span class="cov0" title="0"> else if r.isRace() </span><span class="cov0" title="0">{
+                return "in " + color.CyanString("parallel-race")
+        }</span><span class="cov0" title="0"> else {
+                return "in " + color.CyanString("sequence")
+        }</span>
+}
+
+func (r *runOptions) isSerialAndParallel() bool <span class="cov10" title="3">{
+        return r.fc.Bool("serial") &amp;&amp; r.fc.Bool("parallel")
+}</span>
+
+func (r *runOptions) isParallel() bool <span class="cov6" title="2">{
+        return r.fc.Bool("parallel") &amp;&amp; !r.fc.Bool("race")
+}</span>
+
+func (r *runOptions) isRace() bool <span class="cov6" title="2">{
+        return r.fc.Bool("parallel") &amp;&amp; r.fc.Bool("race")
+}</span>
+</pre>
+		</div>
+		
+		<div id="file5" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/task.go (66.7%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "errors"
+        "fmt"
+        "os/exec"
+
+        "github.com/fatih/color"
+)
+
+type task struct {
+        title        string
+        descriptions []string
+        commands     []string
+        options      taskOptions
+        aborted      bool
+        cmd          *exec.Cmd
+}
+
+func newTask() task <span class="cov9" title="75">{
+        return task{
+                title:        "",
+                descriptions: []string{},
+                commands:     []string{},
+                options:      taskOptions{},
+                aborted:      false,
+                cmd:          nil,
+        }
+}</span>
+
+type taskOptions struct {
+}
+
+// Runs a task.
+func (t *task) run(opts *runOptions, c chan error) <span class="cov2" title="2">{
+        for _, command := range t.commands </span><span class="cov2" title="2">{
+                if t.aborted </span><span class="cov0" title="0">{
+                        c &lt;- nil
+                        return
+                }</span>
+
+                <span class="cov2" title="2">fmt.Println("+" + command)
+                t.cmd = execCommand(command)
+
+                if t.cmd.Run() != nil </span><span class="cov1" title="1">{
+                        c &lt;- errors.New("Task " + color.MagentaString(t.title) + " failed")
+                        return
+                }</span>
+        }
+
+        <span class="cov1" title="1">c &lt;- nil</span>
+}
+
+// Aborts a task.
+func (t *task) abort() <span class="cov0" title="0">{
+        if t.aborted </span><span class="cov0" title="0">{
+                return
+        }</span>
+
+        <span class="cov0" title="0">terminateCommand(t.cmd)
+
+        t.aborted = true</span>
+}
+
+// Adds the description.
+func (t *task) addDescription(description string) <span class="cov9" title="66">{
+        t.descriptions = append(t.descriptions, description)
+}</span>
+
+// Sets the title.
+func (t *task) setTitle(title string) <span class="cov9" title="68">{
+        t.title = title
+}</span>
+
+// Adds the code.
+func (t *task) addCommands(commands []string) <span class="cov10" title="98">{
+        t.commands = append(t.commands, commands...)
+}</span>
+</pre>
+		</div>
+		
+		<div id="file6" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/task_collection.go (58.7%)
+			</p>
+			<pre class="file-content">package main
+
+// Task collection model.
+type TaskCollection struct {
+        currentTask *task
+        tasks       []*task
+        taskMap     map[string]*task
+}
+
+// Creates a new task collection.
+func newTaskCollection() *TaskCollection <span class="cov4" title="7">{
+
+        // This is a dummy task, and will be discarded when the first task is created
+        t := newTask()
+
+        return &amp;TaskCollection{
+                currentTask: &amp;t,
+                tasks:       []*task{},
+                taskMap:     map[string]*task{},
+        }
+}</span>
+
+func (tc *TaskCollection) Run(opts *runOptions) error <span class="cov2" title="2">{
+        if opts.isParallel() </span><span class="cov0" title="0">{
+                return tc.runParallel(opts)
+        }</span><span class="cov2" title="2"> else if opts.isRace() </span><span class="cov0" title="0">{
+                return tc.runInRace(opts)
+        }</span>
+
+        <span class="cov2" title="2">return tc.runSequentially(opts)</span>
+}
+
+func (tc *TaskCollection) runSequentially(opts *runOptions) error <span class="cov2" title="2">{
+        c := make(chan error)
+
+        for _, t := range tc.tasks </span><span class="cov2" title="2">{
+                go t.run(opts, c)
+
+                err := &lt;-c
+
+                if err != nil </span><span class="cov1" title="1">{
+                        return err
+                }</span>
+        }
+
+        <span class="cov1" title="1">return nil</span>
+}
+
+func (tc *TaskCollection) runParallel(opts *runOptions) error <span class="cov0" title="0">{
+        c := make(chan error)
+
+        for i := range tc.tasks </span><span class="cov0" title="0">{
+                t := tc.tasks[i]
+                go t.run(opts, c)
+        }</span>
+
+        <span class="cov0" title="0">for range tc.tasks </span><span class="cov0" title="0">{
+                err := &lt;-c
+
+                if err != nil </span><span class="cov0" title="0">{
+                        tc.abort()
+                        return err
+                }</span>
+        }
+
+        <span class="cov0" title="0">return nil</span>
+}
+
+func (tc *TaskCollection) runInRace(opts *runOptions) error <span class="cov0" title="0">{
+        c := make(chan error)
+
+        for i := range tc.tasks </span><span class="cov0" title="0">{
+                go tc.tasks[i].run(opts, c)
+        }</span>
+
+        <span class="cov0" title="0">defer tc.abort()
+
+        return &lt;-c</span>
+}
+
+func (tc *TaskCollection) abort() <span class="cov0" title="0">{
+        for _, t := range tc.tasks </span><span class="cov0" title="0">{
+                t.abort()
+        }</span>
+}
+
+func (tc *TaskCollection) newTask() <span class="cov9" title="68">{
+        t := newTask()
+        tc.tasks = append(tc.tasks, &amp;t)
+        tc.currentTask = &amp;t
+}</span>
+
+func (tc *TaskCollection) setCurrentTaskTitle(title string) <span class="cov9" title="68">{
+        tc.currentTask.setTitle(title)
+        tc.taskMap[title] = tc.currentTask
+}</span>
+
+func (tc *TaskCollection) addCurrentTaskDescription(description string) <span class="cov9" title="66">{
+        tc.currentTask.addDescription(description)
+}</span>
+
+func (tc *TaskCollection) addCurrentTaskCommands(commands []string) <span class="cov10" title="98">{
+        tc.currentTask.addCommands(commands)
+}</span>
+
+func (tc *TaskCollection) filterByTitles(titles []string) *TaskCollection <span class="cov2" title="2">{
+        tasks := []*task{}
+        taskMap := map[string]*task{}
+
+        for _, title := range titles </span><span class="cov2" title="2">{
+                tasks = append(tasks, tc.taskMap[title])
+                taskMap[title] = tc.taskMap[title]
+        }</span>
+
+        <span class="cov2" title="2">return &amp;TaskCollection{
+                currentTask: tasks[len(tasks)-1],
+                tasks:       tasks,
+                taskMap:     taskMap,
+        }</span>
+}
+
+// Gets a task by the given title.
+func (tc *TaskCollection) getByTitle(title string) (*task, bool) <span class="cov3" title="4">{
+        t, ok := tc.taskMap[title]
+
+        return t, ok
+}</span>
+</pre>
+		</div>
+		
+		<div id="file7" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/usage.go (100.0%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "fmt"
+
+        "github.com/fatih/color"
+)
+
+// Shows the help message.
+func usage() <span class="cov8" title="1">{
+        fmt.Printf(`
+  Usage: %s [options] &lt;task, ...&gt; [-- extra-options]
+
+  Options:
+    -v, --version   - - - Shows the version number and exits.
+    -h, --help  - - - - - Shows the help message and exits.
+    -i, --info  - - - - - Shows the task information and exits.
+    -p, --parallel  - - - Runs tasks in parallel. Default false.
+    -s, --sequential  - - Runs tasks in serial. Default true.
+    -c, --config &lt;path&gt; - Specifies the config file. Default is 'saku.md'.
+    -r, --race  - - - - - Set the flag to kill all tasks when a task
+                          finished with zero. This option is valid only
+                          with 'parallel' option.
+    -q, --quiet   - - - - Stops the logging.
+
+  The extra options after '--' are passed to each task command.
+
+`, color.CyanString("saku"))
+}</span>
+</pre>
+		</div>
+		
+		<div id="file8" style="display: none;">
+			<p class="breadcrumb">
+				<a href="#index">Index</a> &gt; github.com/kt3k/saku/util.go (25.0%)
+			</p>
+			<pre class="file-content">package main
+
+import (
+        "github.com/mattn/go-isatty"
+        "os"
+)
+
+// Returns the string prepended by the given emoji when the terminal is tty, otherwise drops emoji and returns the string.
+func prependEmoji(e string, str string) string <span class="cov0" title="0">{
+        if !isatty.IsTerminal(os.Stdout.Fd()) </span><span class="cov0" title="0">{
+                return str
+        }</span>
+
+        <span class="cov0" title="0">return e + "  " + str</span>
+}
+
+// Returns true if the process is invoked in saku.
+func invokedInSaku() bool <span class="cov10" title="6">{
+        return os.Getenv("IN_SAKU") == "true"
+}</span>
+</pre>
+		</div>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var visible;
+		window.addEventListener('hashchange', onHashChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				visible = document.getElementById("index");
+			visible.style.display = 'block';
+			window.scrollTo(0, 0);
+		}
+		function onHashChange() {
+			select(location.hash.substr(1));
+		}
+		select(location.hash.substr(1));
+	})();
+	</script>
+</html>
